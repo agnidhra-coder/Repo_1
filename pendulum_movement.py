@@ -1,5 +1,4 @@
 from math import sin, pi
-import decimal as dm
 GTY = 0.0489
 class pendulum:
     def __init__(self, length, mass, theta):

@@ -6,14 +6,16 @@ except Exception:
     print("You are either missing one or more files or they are not in same directory")
 
 pygame.init()
-a1, a2 = 1440, 1280                     #Provide the diplay configuration here
+a1, a2 = 1440, 1280                     #PROVIDE THE DISPLAY CONFIGURATION HERE
 x_offset, y_offset = a1 // 2, a2 // 2
 p_c = dict()
 running = True
 
 
 def run(p):
+    #PROVIDE THE PENDULUM ROD COLOR IN THE SECOND ARGUEMENT IN RGB[R, G, B] FORM
     pygame.draw.line(screen, (255, 255, 255), (x_offset, y_offset), (x_offset + (x1:=p.movement()[0]), y_offset - (y1:=p.movement()[1])))
+    #PROVIDE THE PENDULUM BOB COLOR IN THE SECOND ARGUEMENT IN RGB{R, G, B} FORM
     pygame.draw.circle(screen, (255, 255, 255), (x_offset + x1, y_offset - y1), p.mass * 3)
 
 try:
@@ -42,7 +44,7 @@ try:
                     pygame.display.quit()
                     pygame.quit()
                     running = False
-        screen.fill((0, 0, 0))
+        screen.fill((0, 0, 0)) #PROVIDE SCREEN BACKGROUND COLOR HERE IN RGB[R, G, B} FORM
         pygame.display.set_caption('Simple Pendulum')
         for i in p_c:
             run(p_c[i])
