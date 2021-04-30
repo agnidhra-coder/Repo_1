@@ -25,10 +25,10 @@ try:
     for i in range(n):
         print(f"\nFor pendulum {i + 1}\n")
         theta = radians(float(input("enter start angle[in degrees]: ")))
-        mass = float(input("enter mass[in kg and try to keep it small within 5]: "))
-        length = float(input("enter length[in m and same thing try keeping small < 3.5]: ")) * 100
+        mass = float(input("Enter mass[in kg and try to keep it small within 5]: "))
+        length = float(input("Enter length[in m and same thing try keeping small < 3.5]: ")) * 100
         p_c[i] = pm.pendulum(length, mass, theta)
-    print("to quit just close the window or press ESC.")
+    print("To quit just close the window or press ESC.")
 
     screen = pygame.display.set_mode([a1, a2])
     
